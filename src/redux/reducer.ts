@@ -27,7 +27,7 @@ export const InitialState: IInitialState = {
 export const CardViewReducer = (state=InitialState, action:CardTypesAction): IInitialState=> {
     switch (action.type){
         case HANDLE_ONCLICK:
-            return {...state , list: action.payload ? JSON.parse(JSON.stringify(state.list.filter((val)=> val.name.toLowerCase().includes(action.payload) || val.location.toLowerCase().includes(action.payload) ))) : data}
+            return {...state , list: action.payload ? state.list.filter((val)=> val.name.toLowerCase().includes(action.payload) || val.location.toLowerCase().includes(action.payload) ) : data}
         default:
             return state
     }
