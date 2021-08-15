@@ -1,6 +1,7 @@
 import {CardTypesAction, HANDLE_ONCLICK} from "./type";
 import mockData1 from "../data/MockData1.json"
 import mockData2 from "../data/MockData2.json"
+import {filterUtility} from "../util/Filter";
 
 export  type Datatype = {
     id:number;
@@ -27,7 +28,7 @@ export const InitialState: IInitialState = {
 export const CardViewReducer = (state=InitialState, action:CardTypesAction): IInitialState=> {
     switch (action.type){
         case HANDLE_ONCLICK:
-            return {...state , list: action.payload ? state.list.filter((val)=> val.name.toLowerCase().includes(action.payload) || val.location.toLowerCase().includes(action.payload) ) : data}
+            return {...state , list: action.payload ? filterUtility("ON_CLICK", state.list, action.payload) : data}
         default:
             return state
     }

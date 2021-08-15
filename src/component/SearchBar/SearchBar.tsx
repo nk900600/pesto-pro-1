@@ -9,9 +9,12 @@ export const SearchBar = ():JSX.Element => {
     const [value, setValue] = useState("")
 
     const handleOnClickButton = () => {
-        dispatch(handleOnClick(value.toLowerCase()))
+        const newVal = value.replace(/['"]+/g, '')
+        dispatch(handleOnClick(newVal.toLowerCase()))
     }
+
     const handleOnChange = (event:ChangeEvent<HTMLInputElement>) => setValue(event.target.value)
+
 
 
     return <SearchBarWrapper>
