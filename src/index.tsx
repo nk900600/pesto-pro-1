@@ -4,14 +4,16 @@ import './index.css';
 import App, { store } from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import {Amplify} from "aws-amplify";
+import AppSync from "./AppSync";
+
+Amplify.configure(AppSync)
+
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Provider store={store}>
-
-      <App />
-          </Provider>
-  </React.StrictMode>,
+    <Provider store={store}>
+        <App />
+    </Provider>,
   document.getElementById('root')
 );
 

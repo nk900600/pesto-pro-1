@@ -1,10 +1,10 @@
 import {Datatype} from "../redux/reducer";
-import { FilterType } from "./type/FilterType";
+import {CardTypesAction, HANDLE_ONCLICK} from "../redux/type";
 
-export const filterUtility = (type:FilterType, list:Datatype[], value:string):Datatype[] =>{
-    switch (type) {
-        case 'ON_CLICK':
-            return list.filter((val)=> val.name.toLowerCase().includes(value) || val.location.toLowerCase().includes(value))
+export const filterUtility = (action:CardTypesAction, list:Datatype[]):Datatype[] =>{
+    switch (action.type) {
+        case HANDLE_ONCLICK:
+            return list.filter((val)=> val.name.toLowerCase().includes(action.payload) || val.location.toLowerCase().includes(action.payload))
         default:
             return list
     }

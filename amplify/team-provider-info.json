@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pestoproject1-dev-75300-authRole",
+      "UnauthRoleArn": "arn:aws:iam::537597808587:role/amplify-pestoproject1-dev-75300-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::537597808587:role/amplify-pestoproject1-dev-75300-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-pestoproject1-dev-75300-deployment",
+      "UnauthRoleName": "amplify-pestoproject1-dev-75300-unauthRole",
+      "StackName": "amplify-pestoproject1-dev-75300",
+      "StackId": "arn:aws:cloudformation:ap-south-1:537597808587:stack/amplify-pestoproject1-dev-75300/b8ef8340-0226-11ec-80a6-060feb00ce7e",
+      "AmplifyAppId": "d25prhnhwqadyq"
+    },
+    "categories": {
+      "auth": {
+        "pestoproject127acabe1": {}
+      }
+    }
+  }
+}
